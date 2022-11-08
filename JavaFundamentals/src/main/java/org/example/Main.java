@@ -8,6 +8,16 @@ public class Main {
     double doubleValue;
     long longValue;
 
+    public void stringsEqualOrNot() {
+        String str1 = "Prashik";
+        String str2 = "Prashik";
+        if (str1.equals(str2)) {
+            System.out.println("Both the strings are equals");
+        } else {
+            System.out.println("Strings are different");
+        }
+    }
+
     public void defaultValues() {
         System.out.println("All default values");
         System.out.println("String : " + stringValue);
@@ -26,5 +36,6 @@ public class Main {
         Main mainObj = new Main();
         mainObj.displayMessage();
         mainObj.defaultValues();
+        mainObj.stringsEqualOrNot();
     }
 }
