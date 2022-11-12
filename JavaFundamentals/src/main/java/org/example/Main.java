@@ -1,5 +1,5 @@
 package org.example;
-
+import java.util.Scanner;
 public class Main {
     String stringValue;
     int intValue;
@@ -7,6 +7,17 @@ public class Main {
     boolean booleanValue;
     double doubleValue;
     long longValue;
+
+    Scanner scnr;
+    public Main () {
+        scnr = new Scanner(System.in);
+    }
+
+    public void getNameFromCommandLine() {
+        System.out.println("Enter name : ");
+        String name = String.valueOf(scnr.next());
+        System.out.println("Entered name is : " + name);
+    }
 
     public void stringsEqualOrNot() {
         String str1 = "Prashik";
@@ -37,5 +48,6 @@ public class Main {
         mainObj.displayMessage();
         mainObj.defaultValues();
         mainObj.stringsEqualOrNot();
+        mainObj.getNameFromCommandLine();
     }
 }
