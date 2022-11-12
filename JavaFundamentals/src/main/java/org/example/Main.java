@@ -12,6 +12,18 @@ public class Main {
     public Main () {
         scnr = new Scanner(System.in);
     }
+    public void sumOfCommandLineArguments() {
+        int temp;
+        int sum = 0;
+        System.out.print("\n Enter how many times do you want to iterate the loop : ");
+        int num = scnr.nextInt();
+        for (int i = 0; i < num; i++) {
+            System.out.println("Enter number for performing addition operation : ");
+            temp = scnr.nextInt();
+            sum = sum + temp;
+        }
+        System.out.println("Sum of Valid Integers : " + sum);
+    }
 
     public void getNameFromCommandLine() {
         System.out.println("Enter name : ");
@@ -45,9 +57,10 @@ public class Main {
 
     public static void main(String[] args) {
         Main mainObj = new Main();
-        mainObj.displayMessage();
-        mainObj.defaultValues();
-        mainObj.stringsEqualOrNot();
-        mainObj.getNameFromCommandLine();
+//        mainObj.displayMessage();
+//        mainObj.defaultValues();
+//        mainObj.stringsEqualOrNot();
+//        mainObj.getNameFromCommandLine();
+        mainObj.sumOfCommandLineArguments();
     }
 }
