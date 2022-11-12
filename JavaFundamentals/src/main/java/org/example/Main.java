@@ -12,6 +12,21 @@ public class Main {
     public Main () {
         scnr = new Scanner(System.in);
     }
+
+    public void leapYear() {
+        System.out.println("Enter Year : ");
+        int year = scnr.nextInt();
+        int yearUpto = 1582;
+        if(year > yearUpto){
+            if(((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)) {
+                    System.out.println("It is a Leap year");
+            } else {
+                System.out.println("It is not a Leap year");
+            }
+        } else {
+            System.out.println("Year should  be greater than 1582");
+        }
+    }
     public void sumOfCommandLineArguments() {
         int temp;
         int sum = 0;
@@ -57,10 +72,11 @@ public class Main {
 
     public static void main(String[] args) {
         Main mainObj = new Main();
-//        mainObj.displayMessage();
-//        mainObj.defaultValues();
-//        mainObj.stringsEqualOrNot();
-//        mainObj.getNameFromCommandLine();
+        mainObj.displayMessage();
+        mainObj.defaultValues();
+        mainObj.stringsEqualOrNot();
+        mainObj.getNameFromCommandLine();
         mainObj.sumOfCommandLineArguments();
+        mainObj.leapYear();
     }
 }
